@@ -1,0 +1,14 @@
+C:\Projetos\Console_RPG_Game\obj\Debug\net10.0\Console_RPG_Game.GeneratedMSBuildEditorConfig.editorconfig
+C:\Projetos\Console_RPG_Game\obj\Debug\net10.0\Console_RPG_Game.AssemblyInfoInputs.cache
+C:\Projetos\Console_RPG_Game\obj\Debug\net10.0\Console_RPG_Game.AssemblyInfo.cs
+C:\Projetos\Console_RPG_Game\obj\Debug\net10.0\Console_RPG_Game.csproj.CoreCompileInputs.cache
+C:\Projetos\Console_RPG_Game\bin\Debug\net10.0\Console_RPG_Game.exe
+C:\Projetos\Console_RPG_Game\bin\Debug\net10.0\Console_RPG_Game.deps.json
+C:\Projetos\Console_RPG_Game\bin\Debug\net10.0\Console_RPG_Game.runtimeconfig.json
+C:\Projetos\Console_RPG_Game\bin\Debug\net10.0\Console_RPG_Game.dll
+C:\Projetos\Console_RPG_Game\bin\Debug\net10.0\Console_RPG_Game.pdb
+C:\Projetos\Console_RPG_Game\obj\Debug\net10.0\Console_RPG_Game.dll
+C:\Projetos\Console_RPG_Game\obj\Debug\net10.0\refint\Console_RPG_Game.dll
+C:\Projetos\Console_RPG_Game\obj\Debug\net10.0\Console_RPG_Game.pdb
+C:\Projetos\Console_RPG_Game\obj\Debug\net10.0\Console_RPG_Game.genruntimeconfig.cache
+C:\Projetos\Console_RPG_Game\obj\Debug\net10.0\ref\Console_RPG_Game.dll
