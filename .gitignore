@@ -1,0 +1,16 @@
+# Build results
+[Dd]ebug/
+[Rr]elease/
+bin/
+obj/
+
+# Visual Studio hidden cache folder
+.vs/
+
+# User-specific files
+*.user
+*.userprefs
+*.suo
+
+# NuGet Packages
+packages/
