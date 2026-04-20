@@ -2,6 +2,11 @@
 {
     internal class Menu
     {
+        /// <summary>
+        /// Displays the battle menu for the current player and enemy, showing their names and life points.
+        /// </summary>
+        /// <param name="p1">The player whose status and options are displayed in the battle menu.</param>
+        /// <param name="npc">The enemy whose status is displayed in the battle menu.</param>
         static public void BattleMenu(Player p1, GenericEnemy npc)
         {
             Console.Write($@"
@@ -12,6 +17,11 @@ Life Points: {npc.LifePoints,-20} | Life Points: {p1.LifePoints}
 press 1 to use basic attack: ");
         }
 
+        /// <summary>
+        /// Displays the boss battle menu, showing the current status of the player and the boss enemy.
+        /// </summary>
+        /// <param name="p1">The player whose status is displayed in the menu.</param>
+        /// <param name="npc">The boss enemy whose status is displayed in the menu.</param>
         static public void BossBattleMenu(Player p1, BossEnemy npc)
         {
             Console.Write($@"
@@ -22,6 +32,11 @@ Life Points: {npc.LifePoints,-20} | {p1.LifePoints}
 press 1 to use basic attack: ");
         }
 
+        /// <summary>
+        /// Displays a sequence of narrative messages before the boss fight starts.
+        /// </summary>
+        /// <remarks>This method pauses for user input between each message to allow the player to read
+        /// the narrative.</remarks>
         static public void ManusCutScene()
         {
             Console.WriteLine($@"
@@ -135,6 +150,12 @@ Your fate has been sealed.");
 .");
 
         }
+
+        /// <summary>
+        /// Displays a narrative victory message to the user upon defeating the final opponent.
+        /// </summary>
+        /// <remarks>This method pauses execution and waits for the user to press a key before continuing.
+        /// Intended for use at the conclusion of the game to present the final story outcome.</remarks>
         static public void VictoryMessage()
         {
             Console.WriteLine($@"
@@ -149,6 +170,11 @@ and witness the victorious conclusion of your journey's end. But at what cost?..
             Console.ReadKey(true);
         }
 
+        /// <summary>
+        /// Displays a defeat message to the user and waits for a key press before continuing.
+        /// </summary>
+        /// <remarks>This method writes a multi-line defeat message to the console and pauses execution
+        /// until the user presses a key.</remarks>
         static public void DefeatMessage()
         {
             Console.WriteLine($@"
