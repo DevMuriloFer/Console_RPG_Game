@@ -26,7 +26,7 @@ Replacing int.Parse() with int.TryParse() or custom input utility methods to pre
 
 Separation of Concerns (SoC):
 
-Moving the narrative layer and long string constants into a dedicated StoryService or Narrative class, decoupling the game logic from the storytelling elements.
+✅ Moving the narrative layer and long string constants into a dedicated StoryService or Narrative class, decoupling the game logic from the storytelling elements.
 
 Console UX Optimization:
 
