@@ -3,7 +3,7 @@ namespace Console_RPG_Game
 {
     internal class Player
     {
-        public string Name = "Bearer";
+        public string Name = " ";
         public int MaxLifePoints = 70;
         public int LifePoints = 70;
         public int BaseAttack = 10;

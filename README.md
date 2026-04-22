@@ -1,3 +1,8 @@
+**What is this project:**
+This is a Console RPG project designed to help me practice and develop my Object-Oriented Programming skills as a first-semester university student.
+
+About the title: I used the term 'Console RPG Game' in the name to ensure maximum clarity for all users, even though I'm aware the 'G' in RPG already stands for 'Game'.
+
 **[WIP] Work in progress**
 
 Planned Refactoring & Technical Debt
@@ -38,5 +43,3 @@ Inventory System: A system to manage items, healing, and equipment.
 Map & Navigation: A world map for movement and exploration.
 
 Random Encounters: Dynamic enemy spawning during exploration.
-
-**Project Intent: This is strictly a learning project designed to develop and demonstrate my programming skills as a first-semester university student. It does not intend to be a "commercial game," but rather a practical playground for applying C# concepts, Object-Oriented Programming (OOP), and version control.**

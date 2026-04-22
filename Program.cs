@@ -1,16 +1,12 @@
 ﻿using Console_RPG_Game;
+using System.Transactions;
 BossEnemy boss = new BossEnemy();
 Player player = new Player();
 
-Console.WriteLine("You approach a strange figure that says:");
-Console.WriteLine("What is your name, traveler?:");
+Story.PlayCutscene(Story.EnterPlayerNameText, 500, false);
+Console.Write("Name: ");
 player.Name = Console.ReadLine();
-Console.WriteLine("At least you know your own name. Heh heh heh...");
-Console.WriteLine("Here, take this and leave me alone.");
-Console.ReadKey(true);
-
-Console.WriteLine("\n\n\n\n...After a long travel...");
-Console.ReadKey(true);
+Story.PlayCutscene(Story.AfterNameEntryText, 500, true);
 
 for (int i = 0; i < 3; i++)
 {
@@ -21,6 +17,7 @@ for (int i = 0; i < 3; i++)
         enemy.LifePoints = 40;
         enemy.BaseAttack = 10;
         Console.WriteLine("\nThe Sanctuary Guardian approaches...");
+        Console.ReadKey(true);
     }
     if (i == 1)
     {
@@ -28,6 +25,7 @@ for (int i = 0; i < 3; i++)
         enemy.LifePoints = 70;
         enemy.BaseAttack = 15;
         Console.WriteLine("\nThe Abysswalker Artorias approaches...");
+        Console.ReadKey(true);
     }
     if (i == 2)
     {
@@ -35,6 +33,7 @@ for (int i = 0; i < 3; i++)
         enemy.LifePoints = 120;
         enemy.BaseAttack = 20;
         Console.WriteLine("\nThe Black Dragon Kalameet approaches...");
+        Console.ReadKey(true);
     }
 
     while (enemy.LifePoints > 0 && player.LifePoints > 0)
@@ -60,34 +59,46 @@ for (int i = 0; i < 3; i++)
 
     if (i == 0)
     {
-        Console.WriteLine($@"
-Congratulation you won the battle and received a new item:
-New item: Belmont Whip
-Your attack power was raised.");
-        player.BaseAttack = 15;
+        Console.WriteLine("""
+            
+            Congratulation you won the battle
+            and received a new item:
+            New item: Belmont Whip
+            Your attack power was raised.
+            """);
+        player.BaseAttack = 20;
     }
     if (i == 1)
     {
-        Console.WriteLine($@"
-Congratulation you won the battle and received a new item:
-New item: Strange mushroom.
-Your Life points was raised, and ... You became taller???");
+        Console.WriteLine("""
+            
+            Congratulation you won the battle
+            and received a new item:
+            New item: Strange mushroom.
+            Your Life points was raised, and ... You became taller???
+            
+            """);
         player.MaxLifePoints = 120;
     }
     if (i == 2)
     {
-        Console.WriteLine($@"
-Congratulation you won the battle and received a new item:
-New item: Blade of Olympus
-Your attack power was raised.");
+        Console.WriteLine($"""
+
+            Congratulation you won the battle
+            and received a new item:
+            New item: Blade of Olympus
+            Your attack power was raised.
+
+            """);
         player.BaseAttack = 60;
     }
     Console.ReadKey(true);
+    Console.Clear();
     player.LifePoints = player.MaxLifePoints;
 }
 if (player.LifePoints > 0)
 {
-    Menu.ManusCutScene();
+    Story.PlayCutscene(Story.ManusIntroText, 1200, true);
 }
 while (boss.LifePoints > 0 && player.LifePoints > 0)
 {
@@ -116,9 +127,9 @@ while (boss.LifePoints > 0 && player.LifePoints > 0)
 }
 if (boss.LifePoints <= 0)
 {
-    Menu.VictoryMessage();
+    Story.PlayCutscene(Story.VictoryText, 2500, true);
 }
 if (player.LifePoints <= 0)
 {
-    Menu.DefeatMessage();
+    Story.PlayCutscene(Story.DefeatText, 1600, true);
 }
