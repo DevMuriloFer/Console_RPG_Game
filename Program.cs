@@ -1,56 +1,47 @@
 ﻿using Console_RPG_Game;
-using System.Transactions;
-BossEnemy boss = new BossEnemy();
-Player player = new Player();
 
 Story.PlayCutscene(Story.EnterPlayerNameText, 500, false);
 Console.Write("Name: ");
-player.Name = Console.ReadLine();
+Player player = new Player(Console.ReadLine());
 Story.PlayCutscene(Story.AfterNameEntryText, 500, true);
 
+Entity momentEnemy = new Entity();
 for (int i = 0; i < 3; i++)
 {
-    GenericEnemy enemy = new GenericEnemy();
     if (i == 0)
     {
-        enemy.Name = "Guardian";
-        enemy.LifePoints = 40;
-        enemy.BaseAttack = 10;
+        momentEnemy = EnemyFactory.CreateGuardian();
         Console.WriteLine("\nThe Sanctuary Guardian approaches...");
         Console.ReadKey(true);
     }
     if (i == 1)
     {
-        enemy.Name = "Artorias";
-        enemy.LifePoints = 70;
-        enemy.BaseAttack = 15;
+        momentEnemy = EnemyFactory.CreateArtorias();
         Console.WriteLine("\nThe Abysswalker Artorias approaches...");
         Console.ReadKey(true);
     }
     if (i == 2)
     {
-        enemy.Name = "Kalameet";
-        enemy.LifePoints = 120;
-        enemy.BaseAttack = 20;
+        momentEnemy = EnemyFactory.CreateKalameet();
         Console.WriteLine("\nThe Black Dragon Kalameet approaches...");
         Console.ReadKey(true);
     }
 
-    while (enemy.LifePoints > 0 && player.LifePoints > 0)
+    while (momentEnemy.LifePoints > 0 && player.LifePoints > 0)
     {
-        Menu.BattleMenu(player, enemy);
+        Menu.BattleMenu(player, momentEnemy);
         int option = int.Parse(Console.ReadLine());
         switch (option)
         {
             case 1:
-                enemy.LifePoints -= player.Attack();
+                momentEnemy.LifePoints -= player.Attack();
                 break;
         }
-        if (enemy.LifePoints <= 0)
+        if (momentEnemy.LifePoints <= 0)
         {
             break;
         }
-        player.LifePoints -= enemy.Attack(); 
+        player.LifePoints -= momentEnemy.Attack(); 
     }
     if (player.LifePoints <= 0)
     {
@@ -102,7 +93,7 @@ if (player.LifePoints > 0)
 }
 while (boss.LifePoints > 0 && player.LifePoints > 0)
 {
-    Menu.BossBattleMenu(player, boss);
+    Menu.BattleMenu(player, boss);
     int option = int.Parse(Console.ReadLine());
     switch (option)
     {

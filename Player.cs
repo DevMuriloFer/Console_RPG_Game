@@ -1,12 +1,14 @@
 ﻿
 namespace Console_RPG_Game
 {
-    internal class Player
+    internal class Player : Entity
     {
-        public string Name = " ";
-        public int MaxLifePoints = 70;
-        public int LifePoints = 70;
-        public int BaseAttack = 10;
+        public int MaxLifePoints;
+
+        public Player(string name) : base(name, 70, 10)
+        {
+            MaxLifePoints = 70;
+        }
 
         /// <summary>
         /// Calculates and returns the amount of damage dealt by an attack, applying a random multiplier to the base

@@ -1,10 +1,11 @@
 ﻿namespace Console_RPG_Game
 {
-    internal class GenericEnemy
+    internal class RegularBossEnemy : Entity
     {
-        public string Name;
-        public int LifePoints;
-        public int BaseAttack;
+        public RegularBossEnemy(string name, int lifePoints, int baseAttack) : base(name, lifePoints, baseAttack)
+        {
+
+        }
 
         /// <summary>
         /// Calculates and returns the amount of damage dealt by an enemy attack, or zero if the attack misses.

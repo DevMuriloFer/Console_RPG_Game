@@ -1,10 +1,11 @@
 ﻿namespace Console_RPG_Game
 {
-    internal class BossEnemy
+    internal class FinalBossEnemy : Entity
     {
-        public string Name = "Manus";
-        public int LifePoints = 200;
-        public int BaseAttack = 40;
+        public FinalBossEnemy(string name, int lifePoints, int baseAttack) : base(name, lifePoints, baseAttack)
+        {
+
+        }
 
         /// <summary>
         /// Doubles the base attack value by channeling additional power.
