@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using System.Text;
 
-namespace Console_RPG_Game
+namespace Console_RPG_Game.Helpers
 {
     internal static class Utils
     {
@@ -17,6 +17,11 @@ namespace Console_RPG_Game
                 Console.WriteLine(".");
                 Thread.Sleep(400);
             }
+        }
+        private static Random _rand = new Random();
+        public static int RollDice(int faces)
+        {
+            return _rand.Next(1, faces + 1);
         }
     }
 }
