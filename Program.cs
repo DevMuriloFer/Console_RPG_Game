@@ -1,4 +1,6 @@
-﻿using Console_RPG_Game;
+﻿using Console_RPG_Game.Factories;
+using Console_RPG_Game.Helpers;
+using Console_RPG_Game.Models;
 
 Story.PlayCutscene(Story.EnterPlayerNameText, 500, false);
 Console.Write("Name: ");

@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using System.Text;
 
-namespace Console_RPG_Game
+namespace Console_RPG_Game.Helpers
 {
     internal static class Story
     {
@@ -79,7 +79,13 @@ namespace Console_RPG_Game
                 }
                 else 
                 {
-                    Console.WriteLine(line);
+                    for(int i = 0; i < line.Length; i++)
+                    {
+                        Console.Write(line[i]);
+                        Thread.Sleep(25);
+
+                    }
+                    Console.Write("\n");
                     Thread.Sleep(waitTime);
                 }
             }

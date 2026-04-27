@@ -1,8 +1,9 @@
-﻿using System;
+﻿using Console_RPG_Game.Models;
+using System;
 using System.Collections.Generic;
 using System.Text;
 
-namespace Console_RPG_Game
+namespace Console_RPG_Game.Logic
 {
     internal class BattleManager
     {
@@ -14,7 +15,7 @@ namespace Console_RPG_Game
             }
             else return false;
         }
-        static void StartBattle()
+        static void StartBattle(Entity player, Entity enemy)
         {
             while (true)
             {
