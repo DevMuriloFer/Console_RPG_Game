@@ -12,10 +12,7 @@ namespace Console_RPG_Game.Models
         public int BaseAttack;
         protected int MoveSetSize;
 
-        public Entity()
-        {
-
-        }
+        public Entity(){}
 
         public Entity(string name, int lifePoints, int baseAttack, int moveSetSize)
         {
@@ -38,11 +35,13 @@ namespace Console_RPG_Game.Models
                 damage = (int)Math.Round(BaseAttack * 1.5);
                 Menu.DamageReceivedMessage(damage);
                 Menu.CriticalHitMessage();
+                Console.ReadKey();
             }
             else
             {
                 damage = BaseAttack;
                 Menu.DamageReceivedMessage(damage);
+                Console.ReadKey();
             }
             target.TakeDamage(damage);
             return damage;

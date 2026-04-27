@@ -19,14 +19,25 @@ namespace Console_RPG_Game.Helpers
                 
                 Enemy: {enemy.Name,-20}       | Player: {player.Name}
                 Life Points: {enemy.LifePoints,-20} | Life Points: {player.LifePoints}
+                
 
                 """);
+        }
+        static public int GetPlayerCommand(Player player)
+        {
+            int i = 1;
+            foreach (string Command in player.AvailableMoveSet)
+            {
+                Console.WriteLine($"Press {i} for {Command}");
+            }
+            Console.Write("What are you going to do?: ");
+            return int.Parse(Console.ReadLine());
         }
         static public void DamageDeltMessage(int damage)
         {
             Console.WriteLine(
                 $"""
-                --------------------------------------------------------------
+                
                 You Delt {damage} damage to the enemy.
                 """);
         }
@@ -34,7 +45,7 @@ namespace Console_RPG_Game.Helpers
         {
             Console.WriteLine(
                 $"""
-                --------------------------------------------------------------
+                
                 You received {damage} damage.
                 """);
         }
